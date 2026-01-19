@@ -1,0 +1,15 @@
+server:
+  port: 8282
+spring:
+  application:
+    name: springboot-webclient
+
+  # Database Configuration (R2DBC)
+  r2dbc:
+    url: r2dbc:postgresql://localhost:5432/postgres
+    username: ${USERNAME}
+    password: ${PASSWORD}
+    pool:
+      initial-size: 10
+      max-size: 20
+      max-idle-time: 3
